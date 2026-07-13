@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+:root {
+  --color-deep-purple: #2A1B3D;
+  --color-violet: #44318D;
+  --color-magenta: #D83F87;
+  --color-coral: #E98074;
+  --color-slate-blue: #334155; /* CHANGED: Dark gray for readable body text */
+  --color-headline: #111111;   /* CHANGED: Charcoal black for headlines */
+}
+
+@theme inline {
+  --color-deep-purple: var(--color-deep-purple);
+  --color-violet: var(--color-violet);
+  --color-magenta: var(--color-magenta);
+  --color-coral: var(--color-coral);
+  --color-slate-blue: var(--color-slate-blue);
+  --color-headline: var(--color-headline);
+  --font-display: var(--font-space-grotesk);
+  --font-body: var(--font-inter);
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  background-color: #F7F7F5;
+  /* CHANGED: Increased opacity from 0.03 to 0.10 for clearer grid lines */
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.10) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.10) 1px, transparent 1px);
+  background-size: 24px 24px;
+  color: var(--color-slate-blue);
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+h1, h2, h3, .font-display {
+  font-family: var(--font-display), system-ui, sans-serif;
+  color: var(--color-headline); /* ENFORCED: Dynamic headline color application */
+}
+
+::selection {
+  background: var(--color-magenta);
+  color: #FFFFFF; /* TWEAKED: White selection text over magenta highlight */
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-magenta);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
