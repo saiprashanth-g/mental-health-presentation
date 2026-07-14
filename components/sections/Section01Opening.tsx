@@ -16,8 +16,9 @@ export default function Section01Opening() {
 
       {/* Slide Content Container */}
       <div className="relative z-10 max-w-4xl mx-auto text-center space-y-6 py-20">
-        <span className="text-xs uppercase tracking-[0.2em] font-bold text-slate-500 block">
-          AI in Mental Health & Psychology
+        {/* Your Custom Subheading */}
+        <span className="text-[11px] uppercase tracking-[0.2em] font-bold text-slate-500 block max-w-2xl mx-auto leading-relaxed">
+          Leveraging AI for Intervention, Awareness, and Organizational Well-being
         </span>
         
         <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight leading-none text-[var(--color-headline)]">

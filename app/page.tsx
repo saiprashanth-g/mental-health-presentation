@@ -1,3 +1,7 @@
+'use client';
+
+import React from "react";
+import AnimationStagger from "@/components/AnimationStagger";
 import BackgroundDrift from "@/components/BackgroundDrift";
 import ProgressNav from "@/components/ProgressNav";
 
@@ -18,28 +22,100 @@ import Section16Close from "@/components/sections/Section16Close";
 
 export default function Home() {
   return (
-    <main className="relative">
+    <main className="relative w-full text-[var(--color-headline)] antialiased selection:bg-[var(--color-magenta)] selection:text-white">
       <BackgroundDrift />
       <ProgressNav />
 
-      <Section01Opening />
-      <Section02WhoIAm />
-      <Section05RealQuestion />
-      <Section065AIVocabulary />
-      <Section06LLMCapability />
-      <Section06BScaffolding />
-      <Section07PromptEngineering />
+      {/* Slide 1: Opening */}
+      <AnimationStagger selector=".animate-slide" duration={0.6} y={30}>
+        <div className="animate-slide">
+          <Section01Opening />
+        </div>
+      </AnimationStagger>
+
+      {/* Slide 2: Who I Am */}
+      <AnimationStagger selector=".animate-slide">
+        <div className="animate-slide">
+          <Section02WhoIAm />
+        </div>
+      </AnimationStagger>
+
+      {/* Slide 5: Real Question */}
+      <AnimationStagger selector=".animate-slide">
+        <div className="animate-slide">
+          <Section05RealQuestion />
+        </div>
+      </AnimationStagger>
+
+      {/* Slide 6: AI Vocabulary */}
+      <AnimationStagger selector=".animate-slide">
+        <div className="animate-slide">
+          <Section065AIVocabulary />
+        </div>
+      </AnimationStagger>
+
+      {/* Slide 6.1: LLM Capability */}
+      <AnimationStagger selector=".animate-slide">
+        <div className="animate-slide">
+          <Section06LLMCapability />
+        </div>
+      </AnimationStagger>
+
+      {/* Slide 6.2: Scaffolding */}
+      <AnimationStagger selector=".animate-slide">
+        <div className="animate-slide">
+          <Section06BScaffolding />
+        </div>
+      </AnimationStagger>
+
+      {/* Slide 7: Prompt Engineering */}
+      <AnimationStagger selector=".animate-slide">
+        <div className="animate-slide">
+          <Section07PromptEngineering />
+        </div>
+      </AnimationStagger>
       
-      {/* New Safe & Intuitive Ethics & Risk Transition */}
+      {/* 
+        Slide 8 & 9: Ethics & Risk Transition
+        Note: These contain specialized structural internal staggers configured previously 
+      */}
       <Section08Bridge />
       <Section09RiskFramework />
       
-      {/* Product & Action Layer */}
-      <Section12IntroducingWMHIT />
-      <Section13LiveDemo />
-      <Section14WhatDemoShows />
-      <Section15WhereThisGoes />
-      <Section16Close />
+      {/* Slide 12: Introducing WMHIT */}
+      <AnimationStagger selector=".animate-slide">
+        <div className="animate-slide">
+          <Section12IntroducingWMHIT />
+        </div>
+      </AnimationStagger>
+
+      {/* Slide 13: Live Demo (Vercel Button Link) */}
+      <AnimationStagger selector=".animate-slide" duration={0.5}>
+        <div className="animate-slide">
+          <Section13LiveDemo />
+        </div>
+      </AnimationStagger>
+
+      {/* Slide 14: What Demo Shows */}
+      <AnimationStagger selector=".animate-slide">
+        <div className="animate-slide">
+          <Section14WhatDemoShows />
+        </div>
+      </AnimationStagger>
+
+      {/* Slide 15: Where This Goes */}
+      <AnimationStagger selector=".animate-slide">
+        <div className="animate-slide">
+          <Section15WhereThisGoes />
+        </div>
+      </AnimationStagger>
+
+      {/* Slide 16: Closing */}
+      <AnimationStagger selector=".animate-slide" duration={0.7} y={15}>
+        <div className="animate-slide">
+          <Section16Close />
+        </div>
+      </AnimationStagger>
     </main>
   );
 }
