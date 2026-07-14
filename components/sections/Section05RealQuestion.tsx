@@ -2,93 +2,135 @@ import React from "react";
 
 export default function Section05RealQuestion() {
   return (
-    <section className="relative w-full min-h-screen flex flex-col items-center justify-center px-6 py-20 border-b border-gray-200 bg-[var(--color-bg-grid)]">
+    <section className="relative w-full min-h-screen flex flex-col items-center justify-center px-6 py-20 border-b border-gray-200">
       
-      {/* Central Hook Question */}
-      <div className="w-full max-w-4xl mx-auto text-center space-y-6 mb-16 z-10">
-        <h2 className="text-4xl md:text-6xl font-black tracking-tight text-[var(--color-headline)] leading-tight">
-          AI has moved fast in HR, finance, retail. <br />
-          <span className="text-[var(--color-magenta)]">Why hasn’t it moved in mental health?</span>
-        </h2>
-        <div className="h-0.5 w-20 bg-[var(--color-magenta)] mx-auto"></div>
-      </div>
-
-      {/* High-Density Data Matrix Grid */}
-      <div className="w-full max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
+      {/* Top Stat Cluster Row */}
+      <div className="w-full max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 items-start mb-8">
         
-        {/* Card 1: Treatment Delay */}
-        <div className="bg-white/80 backdrop-blur-sm border border-gray-200 rounded-xl p-6 flex flex-col justify-between shadow-sm hover:shadow-md transition-all">
-          <div className="space-y-2">
-            <span className="text-3xl font-black text-[var(--color-magenta)] block">11 Years</span>
-            <p className="text-sm font-bold text-[var(--color-headline)] uppercase tracking-wide">Average Delay to Intervention</p>
-            <p className="text-xs text-[var(--color-slate-blue)] leading-relaxed">
-              The typical lag time between initial symptom onset and an individual receiving their first professional clinical treatment.
-            </p>
+        {/* Left Stats Column */}
+        <div className="space-y-12 md:pt-12">
+          {/* 11 Years */}
+          <div className="space-y-1">
+            <span className="text-xl font-bold text-[var(--color-magenta)] block">11 Years</span>
+            <span className="text-xs font-bold uppercase tracking-wider text-[var(--color-headline)] block">
+              Average delay between symptom onset and initial treatment intervention.
+            </span>
+            <span className="text-[9px] font-mono text-gray-400 block tracking-tight pt-1">
+              Source: National Alliance on Mental Illness (NAMI)
+            </span>
           </div>
-          <span className="text-[10px] text-gray-400 mt-4 block border-t border-gray-100 pt-2 font-mono">Source: National Alliance on Mental Illness (NAMI) / Wang et al.</span>
+
+          {/* $1.0 Trillion */}
+          <div className="space-y-1">
+            <span className="text-xl font-bold text-[var(--color-headline)] block">$1.0 Trillion</span>
+            <span className="text-xs font-bold uppercase tracking-wider text-slate-500 block leading-relaxed">
+              Annual global economic loss driven exclusively by anxiety & depression productivity drops.
+            </span>
+            <span className="text-[9px] font-mono text-gray-400 block tracking-tight pt-1">
+              Source: World Health Organization (WHO)
+            </span>
+          </div>
         </div>
 
-        {/* Card 2: Economic Loss */}
-        <div className="bg-white/80 backdrop-blur-sm border border-gray-200 rounded-xl p-6 flex flex-col justify-between shadow-sm hover:shadow-md transition-all">
-          <div className="space-y-2">
-            <span className="text-3xl font-black text-[var(--color-headline)] block">$1.0 Trillion</span>
-            <p className="text-sm font-bold text-[var(--color-headline)] uppercase tracking-wide">Global Productivity Loss</p>
-            <p className="text-xs text-[var(--color-slate-blue)] leading-relaxed">
-              Annual global economic burden driven entirely by unmitigated anxiety and depression productivity drops.
-            </p>
-          </div>
-          <span className="text-[10px] text-gray-400 mt-4 block border-t border-gray-100 pt-2 font-mono">Source: World Health Organization (WHO) Fact Sheets</span>
+        {/* Center Big Hook Typography */}
+        <div className="text-center space-y-4 md:pt-20">
+          <h2 className="text-4xl md:text-5xl font-black tracking-tight text-[var(--color-headline)] leading-tight">
+            AI has moved fast in HR, finance, retail.
+          </h2>
+          <h3 className="text-4xl md:text-5xl font-black tracking-tight text-[var(--color-headline)] leading-tight">
+            Why hasn’t it moved in <span className="text-[var(--color-magenta)]">mental health</span>?
+          </h3>
+          <div className="h-px w-16 bg-gray-300 mx-auto mt-6"></div>
         </div>
 
-        {/* Card 3: REAL COMPARATIVE STAT (Replacing placeholder) */}
-        <div className="bg-white/80 backdrop-blur-sm border border-gray-200 rounded-xl p-6 flex flex-col justify-between shadow-sm hover:shadow-md transition-all">
-          <div className="space-y-2">
-            <span className="text-3xl font-black text-blue-600 block">84% vs 14%</span>
-            <p className="text-sm font-bold text-[var(--color-headline)] uppercase tracking-wide">The Infrastructure Asymmetry</p>
-            <p className="text-xs text-[var(--color-slate-blue)] leading-relaxed">
-              84% of financial enterprises have scaled production AI systems, compared to under 14% of psychological clinics utilizing validated digital automation interfaces.
-            </p>
+        {/* Right Stats Column */}
+        <div className="space-y-12 md:text-right">
+          {/* 84% vs 14% */}
+          <div className="space-y-1">
+            <span className="text-xl font-bold text-blue-600 block">84% vs 14%</span>
+            <span className="text-xs font-bold uppercase tracking-wider text-slate-500 block leading-relaxed">
+              Enterprise production AI scaling adoption rate versus clinical psychology deployment readiness.
+            </span>
+            <span className="text-[9px] font-mono text-gray-400 block tracking-tight pt-1">
+              Source: McKinsey Global AI Survey / APA Practice Systems
+            </span>
           </div>
-          <span className="text-[10px] text-gray-400 mt-4 block border-t border-gray-100 pt-2 font-mono">Source: McKinsey Global AI Survey / APA Practice Systems Analysis</span>
-        </div>
 
-        {/* Card 4: Workforce Crisis */}
-        <div className="bg-white/80 backdrop-blur-sm border border-gray-200 rounded-xl p-6 flex flex-col justify-between shadow-sm hover:shadow-md transition-all">
-          <div className="space-y-2">
-            <span className="text-3xl font-black text-[var(--color-headline)] block">1 : 150,000</span>
-            <p className="text-sm font-bold text-[var(--color-headline)] uppercase tracking-wide">Psychiatrist Deficiency Ratio</p>
-            <p className="text-xs text-[var(--color-slate-blue)] leading-relaxed">
-              The approximate provider-to-population ratio in developing regions, representing less than a fifth of the basic standard suggested for baseline safety.
-            </p>
+          {/* < 1% */}
+          <div className="space-y-1">
+            <span className="text-xl font-bold text-[var(--color-magenta)] block">&lt; 1%</span>
+            <span className="text-xs font-bold uppercase tracking-wider text-slate-500 block leading-relaxed">
+              Of actionable health data points in behavioral therapy are currently structured electronically.
+            </span>
+            <span className="text-[9px] font-mono text-gray-400 block tracking-tight pt-1">
+              Source: Eleos Health Systems Analysis
+            </span>
           </div>
-          <span className="text-[10px] text-gray-400 mt-4 block border-t border-gray-100 pt-2 font-mono">Source: Indian Journal of Psychiatry / Ministry of Health (PIB)</span>
-        </div>
-
-        {/* Card 5: Treatment Gap */}
-        <div className="bg-white/80 backdrop-blur-sm border border-gray-200 rounded-xl p-6 flex flex-col justify-between shadow-sm hover:shadow-md transition-all">
-          <div className="space-y-2">
-            <span className="text-3xl font-black text-[var(--color-headline)] block">80% – 90%</span>
-            <p className="text-sm font-bold text-[var(--color-headline)] uppercase tracking-wide">Unmet Clinical Need</p>
-            <p className="text-xs text-[var(--color-slate-blue)] leading-relaxed">
-              The vast proportion of individuals experiencing diagnosable behavioral health conditions who receive zero active professional care.
-            </p>
-          </div>
-          <span className="text-[10px] text-gray-400 mt-4 block border-t border-gray-100 pt-2 font-mono">Source: National Mental Health Survey (NMHS)</span>
-        </div>
-
-        {/* Card 6: Admin Burnout */}
-        <div className="bg-white/80 backdrop-blur-sm border border-gray-200 rounded-xl p-6 flex flex-col justify-between shadow-sm hover:shadow-md transition-all">
-          <div className="space-y-2">
-            <span className="text-3xl font-black text-red-600 block">40% – 60%</span>
-            <p className="text-sm font-bold text-[var(--color-headline)] uppercase tracking-wide">Administrative Overhead Burnout</p>
-            <p className="text-xs text-[var(--color-slate-blue)] leading-relaxed">
-              Percentage of a practitioner's active weekly hours lost entirely to manual session text logging, progress tracking, and insurance justifications.
-            </p>
-          </div>
-          <span className="text-[10px] text-gray-400 mt-4 block border-t border-gray-100 pt-2 font-mono">Source: Eleos Health Clinician Study / Provider Burnout Report</span>
         </div>
 
       </div>
+
+      {/* Bottom Large Numbers Row */}
+      <div className="w-full max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 items-start mt-12 pt-12 border-t border-gray-100">
+        
+        {/* 200,000 : 1 */}
+        <div className="space-y-1">
+          <span className="text-lg font-bold text-[var(--color-magenta)] block">200,000 : 1</span>
+          <span className="text-xs font-bold uppercase tracking-wider text-slate-400 block leading-relaxed">
+            Average citizen-to-licensed behavioral practitioner ratio across lower-middle income territories.
+          </span>
+          <span className="text-[9px] font-mono text-gray-400 block tracking-tight pt-1">
+            Source: WHO Mental Health Atlas
+          </span>
+        </div>
+
+        {/* 1 : 150,000 */}
+        <div className="text-center space-y-1">
+          <span className="text-4xl md:text-5xl font-black text-[var(--color-headline)] block tracking-tight">1 : 150,000</span>
+          <span className="text-xs font-bold uppercase tracking-wider text-slate-500 block max-w-xs mx-auto leading-relaxed">
+            Psychiatrist-to-population ratio in India — roughly a fifth of the WHO minimum standard
+          </span>
+          <span className="text-[9px] font-mono text-gray-400 block tracking-tight pt-1">
+            Source: Indian Journal of Psychiatry
+          </span>
+        </div>
+
+        {/* 80-90% */}
+        <div className="text-center space-y-1">
+          <span className="text-4xl md:text-5xl font-black text-[var(--color-headline)] block tracking-tight">80–90%</span>
+          <span className="text-xs font-bold uppercase tracking-wider text-slate-500 block max-w-xs mx-auto leading-relaxed">
+            Of people needing mental health care in India never receive it
+          </span>
+          <span className="text-[9px] font-mono text-gray-400 block tracking-tight pt-1">
+            Source: National Mental Health Survey (NMHS)
+          </span>
+        </div>
+
+        {/* 40-60% Admin Burn & Drop-off Column */}
+        <div className="md:text-right space-y-8">
+          <div className="space-y-1">
+            <span className="text-lg font-bold text-[var(--color-headline)] block">40–60% Admin Burn</span>
+            <span className="text-xs font-bold uppercase tracking-wider text-slate-500 block leading-relaxed">
+              Of a practitioner's weekly hours spent logging clinical session documentation over active care.
+            </span>
+            <span className="text-[9px] font-mono text-gray-400 block tracking-tight pt-1">
+              Source: Provider Burnout Assessment Reports
+            </span>
+          </div>
+
+          <div className="space-y-1">
+            <span className="text-lg font-bold text-[var(--color-magenta)] block">82% Drop-off</span>
+            <span className="text-xs font-bold uppercase tracking-wider text-slate-400 block leading-relaxed">
+              In longitudinal engagement logs when mental health support utilizes un-guided standalone applications.
+            </span>
+            <span className="text-[9px] font-mono text-gray-400 block tracking-tight pt-1">
+              Source: Journal of Medical Internet Research (JMIR)
+            </span>
+          </div>
+        </div>
+
+      </div>
+
     </section>
   );
 }
