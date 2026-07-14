@@ -31,7 +31,9 @@ export default function AnimationStagger({
 }: AnimationStaggerProps) {
   
   const containerRef = useRef<HTMLDivElement>(null);
-  const timelineRef = useRef<gsap.core.Timeline>();
+  
+  // FIXED: Explicitly defined type and initialized with null to resolve compile errors
+  const timelineRef = useRef<gsap.core.Timeline | null>(null);
 
   // Advanced integration managing timeline lifecycle
   useGSAP(() => {
@@ -71,8 +73,10 @@ export default function AnimationStagger({
   // Use useLayoutEffect for immediate cleanup during HMR
   useLayoutEffect(() => {
     return () => {
-      // Safely kill all plugin instances on slide unmount
-      timelineRef.current?.kill();
+      // Safely kill timeline instance on slide unmount
+      if (timelineRef.current) {
+        timelineRef.current.kill();
+      }
       ScrollTrigger.getAll().forEach(t => t.kill());
     };
   }, []);
