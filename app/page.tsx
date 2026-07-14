@@ -33,6 +33,9 @@ export default function Home() {
         </div>
       </AnimationStagger>
 
+      {/* ANCHOR HOOK: Moved immediately after Introduction */}
+      <Section08Bridge />
+
       {/* Slide 2: Who I Am */}
       <AnimationStagger selector=".animate-slide">
         <div className="animate-slide">
@@ -40,7 +43,7 @@ export default function Home() {
         </div>
       </AnimationStagger>
 
-      {/* Slide 5: Real Question */}
+      {/* Slide 5: Real Question / Data Matrix */}
       <AnimationStagger selector=".animate-slide">
         <div className="animate-slide">
           <Section05RealQuestion />
@@ -75,11 +78,7 @@ export default function Home() {
         </div>
       </AnimationStagger>
       
-      {/* 
-        Slide 8 & 9: Ethics & Risk Transition
-        Note: These contain specialized structural internal staggers configured previously 
-      */}
-      <Section08Bridge />
+      {/* Slide 9: Risk & Guardrails */}
       <Section09RiskFramework />
       
       {/* Slide 12: Introducing WMHIT */}
@@ -89,7 +88,7 @@ export default function Home() {
         </div>
       </AnimationStagger>
 
-      {/* Slide 13: Live Demo (Vercel Button Link) */}
+      {/* Slide 13: Live Demo */}
       <AnimationStagger selector=".animate-slide" duration={0.5}>
         <div className="animate-slide">
           <Section13LiveDemo />
